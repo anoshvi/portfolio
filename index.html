@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anosh Viccaji — Portfolio</title>
+  <meta name="description" content="Anosh Viccaji — Cybersecurity & IT. Projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Anosh<span>.</span></a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Cybersecurity &amp; IT</p>
+        <h1>Hi, I'm <span class="grad">Anosh Viccaji</span></h1>
+        <p class="lede">
+          I build and secure things on the web — from cloud deployments to
+          hands-on security work. Welcome to my corner of the internet.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="card">
+            <p>
+              I'm an IT and cybersecurity enthusiast focused on cloud computing,
+              security operations, and building practical web projects. I enjoy
+              turning ideas into deployed, working software and learning how the
+              pieces fit together end to end.
+            </p>
+            <p>
+              Recent focus areas: cloud edge platforms, secure deployments,
+              SIEM/SOC workflows, and applied automation.
+            </p>
+          </div>
+          <ul class="facts">
+            <li><span>📍</span> Based in the US</li>
+            <li><span>🎓</span> Information Technology &amp; Systems</li>
+            <li><span>☁️</span> Cloud &amp; edge platforms</li>
+            <li><span>🔐</span> Security operations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+          <article class="card project">
+            <div class="project-top">🛒</div>
+            <h3>E-commerce Demo on Cloudflare Workers</h3>
+            <p>A full storefront (catalog, cart, checkout, wishlist) served entirely from a single edge Worker.</p>
+            <div class="tags"><span>Workers</span><span>JavaScript</span><span>Edge</span></div>
+          </article>
+          <article class="card project">
+            <div class="project-top">🤖</div>
+            <h3>AI-based Intrusion Detection</h3>
+            <p>An LLM-driven IDS that classifies intrusions from network logs by severity.</p>
+            <div class="tags"><span>Python</span><span>Security</span><span>ML</span></div>
+          </article>
+          <article class="card project">
+            <div class="project-top">🔒</div>
+            <h3>Security Audit &amp; Hardening</h3>
+            <p>Audited authentication flows and remediated high-severity vulnerabilities with route- and handler-level checks.</p>
+            <div class="tags"><span>AppSec</span><span>Next.js</span><span>Auth</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="chips">
+          <span>Cloudflare Workers</span><span>AWS</span><span>Python</span>
+          <span>JavaScript</span><span>Networking</span><span>SIEM</span>
+          <span>Linux</span><span>Git</span><span>DNS</span>
+          <span>WAF / Security</span><span>HTML &amp; CSS</span><span>DevOps</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-inner">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="lede center">Have a question or want to collaborate? Reach out.</p>
+        <div class="cta-row center">
+          <a class="btn primary" href="mailto:hello@example.com">Email Me</a>
+          <a class="btn ghost" href="https://github.com/anoshvi" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Anosh Viccaji. Built with GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
