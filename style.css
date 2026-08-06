@@ -45,8 +45,9 @@ a:hover { text-decoration: underline; }
 .brand { font-weight: 800; font-size: 20px; color: var(--text); }
 .brand span { color: var(--brand); }
 .nav nav { margin-left: auto; display: flex; gap: 20px; }
-.nav nav a { color: var(--muted); font-weight: 600; font-size: 15px; }
+.nav nav a { color: var(--muted); font-weight: 600; font-size: 15px; padding-bottom: 2px; border-bottom: 2px solid transparent; }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
+.nav nav a.active { color: var(--text); border-bottom-color: var(--brand); }
 .theme-toggle {
   border: 1px solid var(--border); background: var(--card); color: var(--text);
   border-radius: 10px; width: 40px; height: 38px; cursor: pointer; font-size: 16px;
@@ -123,6 +124,17 @@ a:hover { text-decoration: underline; }
 }
 
 .contact-inner { text-align: center; }
+
+/* Page header for sub-pages */
+.page-head { padding: 60px 0 10px; }
+.page-head h1 { font-size: clamp(30px, 5vw, 44px); margin: 6px 0 0; }
+
+/* Clickable cards on the home page */
+.link-card { display: block; color: inherit; transition: transform .15s ease, border-color .15s ease; }
+.link-card:hover { transform: translateY(-4px); border-color: var(--brand); text-decoration: none; }
+.link-card h3 { margin: 0 0 8px; font-size: 18px; }
+.link-card p { color: var(--muted); margin: 0 0 12px; }
+.link-card .more { color: var(--brand); font-weight: 700; font-size: 14px; }
 
 .footer { padding: 30px 0; border-top: 1px solid var(--border); color: var(--muted); text-align: center; }
 
