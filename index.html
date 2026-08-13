@@ -1,78 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anosh Viccaji — Portfolio</title>
-  <meta name="description" content="Anosh Viccaji — Cybersecurity & IT. Projects, skills, and contact." />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anoshvi.uk — Online Shopping for Electronics, Home, Books &amp; more</title>
+  <meta name="description" content="Shop electronics, home, books, fashion and more at anoshvi.uk.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="./index.html" class="brand">Anosh<span>.</span></a>
-      <nav aria-label="Primary">
-        <a href="./index.html" class="active">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./skills.html">Skills</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
-    </div>
-  </header>
-
-  <main>
+<body data-page="home">
+  <header id="site-header"></header>
+  <main class="wrap">
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Cybersecurity &amp; IT</p>
-        <h1>Hi, I'm <span class="grad">Anosh Viccaji</span></h1>
-        <p class="lede">
-          I build and secure things on the web — from cloud deployments to
-          hands-on security work. Welcome to my corner of the internet.
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="./projects.html">View Projects</a>
-          <a class="btn ghost" href="./contact.html">Get in Touch</a>
-        </div>
+      <div>
+        <h1>Everything you need, delivered fast.</h1>
+        <p>Deals across electronics, home, books, fashion and more. Free delivery on eligible orders over $35.</p>
+        <a class="btn big" href="#deals">Shop today's deals</a>
       </div>
-      <div class="hero-glow" aria-hidden="true"></div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Explore</h2>
-        <div class="grid">
-          <a class="card project link-card" href="./about.html">
-            <div class="project-top">👋</div>
-            <h3>About Me</h3>
-            <p>Who I am, my focus areas, and background.</p>
-            <span class="more">Read more →</span>
-          </a>
-          <a class="card project link-card" href="./projects.html">
-            <div class="project-top">🛠️</div>
-            <h3>Projects</h3>
-            <p>Things I've built — from edge apps to security tooling.</p>
-            <span class="more">See projects →</span>
-          </a>
-          <a class="card project link-card" href="./skills.html">
-            <div class="project-top">⚡</div>
-            <h3>Skills</h3>
-            <p>Tools and technologies I work with.</p>
-            <span class="more">View skills →</span>
-          </a>
-        </div>
-      </div>
-    </section>
+    <h2 class="section-title">Shop by category</h2>
+    <div class="cards" id="cat-cards"></div>
+
+    <h2 class="section-title" id="deals">Today's Deals</h2>
+    <div class="grid" id="deals-grid"></div>
+
+    <h2 class="section-title">Top rated</h2>
+    <div class="grid" id="top-grid"></div>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Anosh Viccaji. Built with GitHub Pages.</p>
-    </div>
-  </footer>
-
-  <script src="./script.js" defer></script>
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
 </body>
 </html>

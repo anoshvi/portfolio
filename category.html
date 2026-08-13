@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse — anoshvi.uk</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="category">
+  <header id="site-header"></header>
+  <main class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> › <span id="crumb">All</span></div>
+    <div class="layout">
+      <aside class="filters">
+        <h4>Customer rating</h4>
+        <label><input type="radio" name="rating" class="frating" value="0" checked> All</label>
+        <label><input type="radio" name="rating" class="frating" value="4"> ★★★★ &amp; up</label>
+        <label><input type="radio" name="rating" class="frating" value="4.5"> ★★★★½ &amp; up</label>
+        <h4>Max price: <span id="price-val">$1000.00</span></h4>
+        <input type="range" id="price-range" min="10" max="1000" step="10" value="1000">
+        <h4>Brand</h4>
+        <div id="brand-filters"></div>
+      </aside>
+      <section>
+        <div class="toolbar">
+          <div><h2 id="cat-title" style="margin:0;font-size:20px"></h2><small id="result-count"></small></div>
+          <label>Sort by:
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="rating">Avg. Customer Review</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid" id="cat-grid"></div>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+</body>
+</html>

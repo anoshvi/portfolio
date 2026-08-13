@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "service": "anoshvi.uk",
-  "checks": {
-    "site": "up",
-    "cdn": "cloudflare"
-  }
-}
