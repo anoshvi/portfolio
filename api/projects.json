@@ -1,0 +1,23 @@
+{
+  "count": 3,
+  "projects": [
+    {
+      "id": 1,
+      "name": "E-commerce Demo on Cloudflare Workers",
+      "description": "A full storefront (catalog, cart, checkout, wishlist) served entirely from a single edge Worker.",
+      "tags": ["Workers", "JavaScript", "Edge"]
+    },
+    {
+      "id": 2,
+      "name": "AI-based Intrusion Detection",
+      "description": "An LLM-driven IDS that classifies intrusions from network logs by severity.",
+      "tags": ["Python", "Security", "ML"]
+    },
+    {
+      "id": 3,
+      "name": "Security Audit & Hardening",
+      "description": "Audited authentication flows and remediated high-severity vulnerabilities.",
+      "tags": ["AppSec", "Next.js", "Auth"]
+    }
+  ]
+}

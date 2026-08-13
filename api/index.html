@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API — anoshvi.uk</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand">Anosh<span>.</span></a>
+      <nav aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">API</p>
+        <h1>Static JSON endpoints</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="lede">
+          These are real, machine-readable JSON endpoints (work with <code>curl</code>) served as
+          static files through Cloudflare's edge cache. Values are fixed at build time.
+        </p>
+        <div class="grid">
+          <a class="card link-card" href="./health.json"><h3>GET /api/health.json</h3><p>Service health status.</p><span class="more">Open →</span></a>
+          <a class="card link-card" href="./version.json"><h3>GET /api/version.json</h3><p>Build version, commit, timestamp.</p><span class="more">Open →</span></a>
+          <a class="card link-card" href="./profile.json"><h3>GET /api/profile.json</h3><p>Profile info and links.</p><span class="more">Open →</span></a>
+          <a class="card link-card" href="./projects.json"><h3>GET /api/projects.json</h3><p>Projects list.</p><span class="more">Open →</span></a>
+          <a class="card link-card" href="./skills.json"><h3>GET /api/skills.json</h3><p>Skills list.</p><span class="more">Open →</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Anosh Viccaji. Built with GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
