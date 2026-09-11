@@ -18,11 +18,26 @@
   const cartCount = () => Object.values(cart).reduce((a, b) => a + b, 0);
   const cartSubtotal = () => Object.entries(cart).reduce((s, [id, q]) => { const p = byId(id); return s + (p ? p.price * q : 0); }, 0);
 
-  function addToCart(id, qty = 1) {
-    cart[id] = (cart[id] || 0) + qty;
-    save(KEY_CART, cart);
-    updateCartBadge();
-    toast(qty + " added to cart");
+  async function addToCart(id, qty = 1) {
+    try {
+      const response = await fetch("/api/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId: id, quantity: qty }),
+      });
+
+      if (!response.ok) throw new Error("Cart API request failed");
+
+      cart[id] = (cart[id] || 0) + qty;
+      save(KEY_CART, cart);
+      updateCartBadge();
+      toast(qty + " added to cart");
+      return true;
+    } catch (error) {
+      console.error(error);
+      toast("Unable to add item to cart");
+      return false;
+    }
   }
   function setQty(id, qty) {
     if (qty <= 0) delete cart[id]; else cart[id] = qty;
@@ -127,7 +142,7 @@
       </div>`;
   }
   function wireCards(root = document) {
-    $$("[data-add]", root).forEach((b) => b.addEventListener("click", () => addToCart(b.dataset.add)));
+    $$("[data-add]", root).forEach((b) => b.addEventListener("click", () => { void addToCart(b.dataset.add); }));
     $$("[data-wish]", root).forEach((b) => b.addEventListener("click", () => {
       const on = toggleWish(b.dataset.wish); b.classList.toggle("active", on);
       toast(on ? "Added to wishlist" : "Removed from wishlist");
@@ -233,8 +248,10 @@
       </div>
       <h2 class="section-title">More in ${catObj ? catObj.name : "this category"}</h2>
       <div class="grid" id="related">${related.map(card).join("")}</div>`;
-    $("#add-btn").addEventListener("click", () => addToCart(p.id, +$("#qty").value));
-    $("#buy-btn").addEventListener("click", () => { addToCart(p.id, +$("#qty").value); location.href = "cart.html"; });
+    $("#add-btn").addEventListener("click", () => { void addToCart(p.id, +$("#qty").value); });
+    $("#buy-btn").addEventListener("click", async () => {
+      if (await addToCart(p.id, +$("#qty").value)) location.href = "cart.html";
+    });
     document.title = p.title + " — anoshvi.uk";
     wireCards($("#related"));
   }
